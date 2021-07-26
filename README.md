@@ -1,3 +1,3 @@
-# JavaScript Calculator
-Basic Calculator app created with JavaScript
+# JavaScript Projects
+Basic JavaScript projects created while learning front-end development.
 
