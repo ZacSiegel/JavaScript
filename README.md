@@ -1,2 +1,3 @@
-# JavaScript
-JavaScript Projects
+# JavaScript Calculator
+Basic Calculator app created with JavaScript
+
