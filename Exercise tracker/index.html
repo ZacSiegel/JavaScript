@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- CSS styles -->
+    <link rel="stylesheet" href="style.css">
+    <title>Workout Tracker</title>
+
+</head>
+
+<body>
+    <h1>Workout Tracker</h1>
+
+    <!-- Create exercises -->
+    <form id="workouts" class="container-sm">
+        <h2>Add Exercise Session</h2>
+        <div class="row">
+            <label for="exercise-input">Enter new exercise here</label>
+            <input type="text" class="col-md" id="exercise-input" />
+        </div>
+
+        <div class="row">
+            <label for="duration-input">Enter duration (minutes)</label>
+            <input type="text" class=" col-md exercise-time" id="duration-input" />
+        </div>
+        <div class="row">
+
+            <label for="day-input">Select day</label>
+            <select id="day-input" class="col-md filter-todo">
+                <option value="Sunday">Sunday</option>
+                <option value="Monday">Monday</option>
+                <option value="Tuesday">Tuesday</option>
+                <option value="Wednesday">Wednesday</option>
+                <option value="Thursday">Thursday</option>
+                <option value="Friday">Friday</option>
+                <option value="Saturday">Saturday</option>
+            </select>
+        </div>
+        <div class="btn-wrapper">
+            <button class="exercise-button" type="submit" id="exercise-btn">
+                <i class="fas fa-plus-circle"></i>
+                Add exercise
+            </button>
+        </div>
+    </form>
+
+    <!-- Exercise container -->
+    <div class="container" id="exercise-container">
+        <h2>Workouts</h2>
+
+        <!-- Filter Exercises -->
+        <div class="select">
+            <label for="day-filter">Filter by day :</label>
+            <select class="day-filter" id="day-filter">
+                <option value="All">All</option>
+                <option value="Sunday">Sunday</option>
+                <option value="Monday">Monday</option>
+                <option value="Tuesday">Tuesday</option>
+                <option value="Wednesday">Wednesday</option>
+                <option value="Thursday">Thursday</option>
+                <option value="Friday">Friday</option>
+                <option value="Saturday">Saturday</option>
+            </select>
+        </div>
+        <div class="exercise-container">
+            <ul class="exercise-list">
+            </ul>
+        </div>
+    </div>
+
+
+
+    <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
