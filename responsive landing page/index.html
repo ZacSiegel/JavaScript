@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Songify</title>
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;400;600;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- CSS styles -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font-Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+    <!-- Showcase & Nav -->
+    <div id="showcase">
+
+        <nav id="mainNavbar" class="navbar navbar-expand-md navbar-light position-absolute w-100">
+            <div class="container-fluid position" id="nav-container">
+                <a class="navbar-brand" id="brand" href="#"><i class="fas fa-headphones-alt" id="headphone-icon"></i>
+                    Songify</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon" id="navbar-toggle-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link" href="#plans">Plans</a>
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#login-modal">Log In</a>
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#signup-modal">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="section-main container">
+            <h1>Music anywhere, anytime</h1>
+            <p class="lead hide-on-small">
+                With over 20 million songs, Songify is the best way to organize and enjoy the music you love while
+                allowing you to discover even more.
+            </p>
+            <!-- <a href="#" class="btn" id="btn">sign up</a> -->
+
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#signup-modal"
+                id="signup-btn">
+                Sign Up
+            </button>
+
+            <!-- Signup Modal -->
+            <div class="modal fade" id="signup-modal" tabindex="-1" aria-labelledby="create-account" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="create-account"><i class="fas fa-headphones-alt"
+                                    id="headphone-icon"></i> Create your account</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-group">
+
+                                    <input type="text" class="form-control" id="signup-username"
+                                        aria-describedby="emailHelp" placeholder="Enter username">
+                                    <small id="emailHelp" class="form-text text-muted"></small>
+                                </div>
+                                <div class="form-group">
+
+                                    <input type="email" class="form-control" id="signup-email"
+                                        aria-describedby="emailHelp" placeholder="Enter email">
+                                    <small id="emailHelp" class="form-text text-muted"></small>
+                                </div>
+                                <div class="form-group">
+
+                                    <input type="password" class="form-control" id="signup-password"
+                                        placeholder="Password">
+                                </div>
+                                <div class="form-group form-check">
+                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                    <label class="form-check-label" for="exampleCheck1">Remember my password</label>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary" id="signup-submit-btn">Submit</button>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Login Modal -->
+            <!-- Button trigger modal -->
+
+
+            <!-- Modal -->
+            <div class="modal fade" id="login-modal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="create-account"><i class="fas fa-headphones-alt"
+                                    id="headphone-icon"></i> Log in to your account</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-group">
+
+                                    <input type="text" class="form-control" id="signup-username"
+                                        aria-describedby="emailHelp" placeholder="Enter username">
+                                    <small id="emailHelp" class="form-text text-muted"></small>
+                                </div>
+                                <div class="form-group">
+
+                                    <input type="password" class="form-control" id="signup-password"
+                                        placeholder="Password">
+                                </div>
+                                <div class="form-group form-check">
+                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                    <label class="form-check-label" for="exampleCheck1">Remember my password</label>
+                                </div>
+                                <button type="submit" class="btn btn-primary" id="signup-submit-btn">Submit</button>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Plans Section -->
+    <section id="plans" class="section">
+        <div id="plans-container">
+            <h2 id="plans-header">
+                Plans & Pricing
+            </h2>
+            <div class="row" id="card-row">
+                <!-- Free user -->
+                <div class="card col-8" id="card-1">
+                    <div class="title">Free User</div>
+                    <h3 class="icon">
+                        Free
+                    </h3>
+                    <div class="features">
+                        <ul>
+                            <li>Unlimited streaming</li>
+                            <li>Includes ads every 3 songs</li>
+                            <li>5 song skips per hour</li>
+                        </ul>
+                    </div>
+                    <a href="#" class="btn"><i class="far fa-play-circle"></i> Begin Free Trial</a>
+                </div>
+
+                <!--Standard User-->
+                <div class="card col-8" id="card-2">
+                    <div class="title">Standard User</div>
+                    <h3 class="icon">
+                        $4.99
+                    </h3>
+                    <div class="features">
+                        <ul>
+                            <li>Unlimited streaming</li>
+                            <li>No ads</li>
+                            <li>Unlimited song skips</li>
+                        </ul>
+                    </div>
+                    <a href="#" class="btn"><i class="far fa-play-circle"></i> Begin Free Trial</a>
+                </div>
+
+                <!--Premium User-->
+                <div class="card col-8" id="card-3">
+                    <div class="title">Premium User</div>
+                    <h3 class="icon">
+                        $9.99
+                    </h3>
+                    <div class="features" id="card-3-features">
+                        <ul id="card-3-ul">
+                            <li>Unlimited streaming (no ads)</li>
+                            <li>Unlimited song skips</li>
+                            <li>Can download songs onto your device</li>
+                        </ul>
+                    </div>
+                    <a href="#" class="btn"><i class="far fa-play-circle"></i> Begin Free Trial</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>company</h4>
+                    <ul>
+                        <li><a href="#">about us</a></li>
+                        <li><a href="#">our services</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                        <li><a href="#">affiliate program</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contact us</a></li>
+                        <li><a href="#">Terms of use</a></li>
+                        <li><a href="#">payment options</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
